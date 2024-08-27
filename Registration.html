@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h3><u>Welcome to Registration Page</u></h3>
+    <br>
+    <form action="POST" onsubmit="return validateForm()">
+        <div id="id1">
+            <div id="id2">
+                <label for="Name">
+                    Name
+                    <input type="text" id="Name" placeholder="Enter your name" required>
+                </label>
+            </div>
+            <br>
+            <div id="id3">
+                Email
+                <label for="Email">
+                    <input type="email" id="Email" placeholder="Enter your email" required>
+                </label>
+            </div>
+            <br>
+            <div id="id4">
+                Phone Number
+                <label for="Mobile">
+                    <input type="tel" id="Mobile" placeholder="Enter mobile number" required>
+                </label>
+            </div>
+            <br>
+            <div id="id5">
+                Address
+                <label for="Add">
+                    <textarea id="Add" required>Enter your address</textarea>
+                </label>
+            </div>
+            <br>
+            <div id="id6">
+                Create Password
+                <label for="createPass">
+                    <input type="password" id="createPass" required>
+                </label>
+            </div>
+            <br>
+            <div id="id7">
+                Confirm Password
+                <label for="confirmPass">
+                    <input type="password" id="confirmPass" required>
+                </label>
+            </div>
+        </div>
+        <br>
+        <div id="id8">
+            <button type="submit" >Register</button>
+        </div>
+    </form>
+    <style>
+        #id1{
+            margin-left: 44%;
+        }
+        h3{
+            text-align: center;
+        }
+        #id8{
+            margin-left: 48%;
+        }
+    </style>
+    <script>
+        function validateForm(){
+            let created_pass = document.getElementById('createPass').value;
+            let confirm_pass = document.getElementById('confirmPass').value;
+            if(created_pass===confirm_pass){
+                alert('Registration successful');
+                return true;
+            }
+            else{
+                alert('Incorrect password');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
