@@ -12,6 +12,7 @@ def register():
 
     if len(phone)<10:
         messagebox.showwarning("Warning","Phone number must be 10 digits")
+        return
 
     if confirmpassword!=password:
         messagebox.showwarning("Warning","Passwords do not match")
